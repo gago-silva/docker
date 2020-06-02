@@ -32,14 +32,11 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     nano \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-
 RUN pip install --upgrade pip
 RUN pip install numpy pandas matplotlib plotly xlrd
 #Static Image Export Support
 RUN pip install psutil requests
 #Extended Geo Support
 RUN pip install plotly-geo==1.0.0
-
-
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_UID
