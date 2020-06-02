@@ -1,12 +1,13 @@
+# Start from a core stack version
+FROM jupyter/scipy-notebook:latest
 
-FROM agagosilva/jupyter-plotly
+# Install the Dask dashboard
+RUN pip install dask_labextension ; \
+    jupyter labextension install -y --clean \
+    dask-labextension
 
-LABEL maintainer="agagosilva"
-USER root
+# Dask Scheduler & Bokeh ports
+EXPOSE 8787
+EXPOSE 8786
 
-# Install all OS dependencies for fully functional notebook server
-RUN pip install --upgrade pip
-RUN pip install dash
-
-# Switch back to jovyan to avoid accidental container runs as root
-USER $NB_UID
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root"]
