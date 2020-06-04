@@ -6,7 +6,7 @@ LABEL maintainer="agagosilva"
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN pip install pandas PIL
+RUN pip install pandas
 
 RUN conda config --add channels conda-forge
 
@@ -15,7 +15,7 @@ RUN conda install \
 	matplotlib \
         plotly \
         seaborn \
-#        keras \
+        PIL \
 	tensorflow &&\
 #	scikit-learn && \
 	conda clean -tipsy
