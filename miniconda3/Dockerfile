@@ -6,7 +6,7 @@ LABEL maintainer="agagosilva"
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN pip install pandas
+RUN pip install pandas PIL
 
 RUN conda config --add channels conda-forge
 
