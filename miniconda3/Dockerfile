@@ -8,16 +8,17 @@ ENV PATH /opt/conda/bin:$PATH
 
 RUN pip install pandas
 
+RUN sudo apt-get build-dep python-imaging
+RUN sudo apt-get install libjpeg62 libjpeg62-dev
+RUN pip install PIL
+
 RUN conda config --add channels conda-forge
 
 RUN conda install \
-#	pandas \
 	matplotlib \
         plotly \
         seaborn \
-        PIL \
 	tensorflow &&\
-#	scikit-learn && \
 	conda clean -tipsy
 
 
