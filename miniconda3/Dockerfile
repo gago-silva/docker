@@ -9,8 +9,13 @@ ENV PATH /opt/conda/bin:$PATH
 RUN conda config --add channels conda-forge
 
 RUN conda install \
+	pandas \
+	matplotlib \
         plotly \
-	tensorflow && \
+        seaborn \
+        keras \
+	tensorflow \
+	scikit-learn && \
 	conda clean -tipsy
 
 
