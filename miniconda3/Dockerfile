@@ -8,8 +8,8 @@ ENV PATH /opt/conda/bin:$PATH
 
 RUN pip install pandas
 
-RUN sudo apt-get build-dep python-imaging
-RUN sudo apt-get install libjpeg62 libjpeg62-dev
+#RUN sudo apt-get build-dep python-imaging
+#RUN sudo apt-get install libjpeg62 libjpeg62-dev
 RUN pip install Pillow
 
 RUN conda config --add channels conda-forge
