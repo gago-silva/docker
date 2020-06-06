@@ -10,7 +10,7 @@ RUN pip install pandas
 
 #RUN sudo apt-get build-dep python-imaging
 #RUN sudo apt-get install libjpeg62 libjpeg62-dev
-RUN pip install Pillow
+RUN pip install Pillow lxml Cython opencv-python
 
 RUN conda config --add channels conda-forge
 
@@ -21,4 +21,7 @@ RUN conda install \
         gdal \
 	tensorflow &&\
 	conda clean -tipsy
+
+
+
 
