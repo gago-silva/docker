@@ -16,6 +16,8 @@ RUN conda install \
         plotly \
         seaborn \
         gdal \
+	cartopy \
+	simpledbf \
 	tensorflow &&\
 	conda clean -tipsy
 
