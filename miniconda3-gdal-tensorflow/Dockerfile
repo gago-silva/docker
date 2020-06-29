@@ -6,7 +6,7 @@ LABEL maintainer="agagosilva"
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN pip install Pillow lxml Cython opencv-python laspy
+RUN pip install Pillow lxml Cython opencv-python laspy simpledbf
 
 RUN conda config --add channels conda-forge
 
@@ -17,7 +17,6 @@ RUN conda install \
         seaborn \
         gdal \
 	cartopy \
-	simpledbf \
 	tensorflow &&\
 	conda clean -tipsy
 
