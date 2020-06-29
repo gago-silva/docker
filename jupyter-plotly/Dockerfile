@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip
-RUN pip install numpy pandas matplotlib plotly xlrd cartopy simpledbf
+RUN pip install numpy pandas matplotlib plotly xlrd
 #Static Image Export Support
 RUN pip install psutil requests
 #Extended Geo Support
