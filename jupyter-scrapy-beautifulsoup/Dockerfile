@@ -40,3 +40,4 @@ RUN pip install psutil requests
 RUN pip install plotly-geo==1.0.0 BeautifulSoup4 scrapy
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_UID
+USER $NB_UID
