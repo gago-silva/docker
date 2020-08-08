@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 RUN pip install --upgrade pip
 RUN pip install numpy pandas matplotlib plotly xlrd
 #Static Image Export Support
-RUN pip install psutil requests
+RUN pip install psutil requests datefinder
 #Extended Geo Support
 RUN pip install plotly-geo==1.0.0 BeautifulSoup4 scrapy
 # Switch back to jovyan to avoid accidental container runs as root
