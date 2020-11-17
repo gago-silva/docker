@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip
-RUN pip install numpy pandas matplotlib plotly xlrd geopandas
+RUN pip install numpy pandas matplotlib plotly xlrd geopandas numericalunits
 RUN pip install psutil requests datefinder pycountry
 RUN pip install plotly-geo==1.0.0 BeautifulSoup4 scrapy ipython-sql requests_html pyppdf multiprocess
 RUN conda install -y sqlalchemy psycopg2
