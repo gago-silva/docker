@@ -19,5 +19,7 @@ RUN conda install --quiet --yes \
     fix-permissions /home/$NB_USER
 
 RUN pip install geopandas
+RUN pip install numpy==1.19.2 keras sklearn tensorflow
+
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER
