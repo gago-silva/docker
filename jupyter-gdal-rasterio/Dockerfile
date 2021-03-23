@@ -18,5 +18,6 @@ RUN conda install --quiet --yes \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
+RUN pip install geopandas
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER
