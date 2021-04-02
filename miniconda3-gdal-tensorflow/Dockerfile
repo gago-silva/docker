@@ -20,6 +20,6 @@ RUN conda install \
 	tensorflow &&\
 	conda clean -tipsy
 
-RUN pip install xarray rioxarray geopandas earthpy
+RUN pip install xarray rioxarray geopandas earthpy datacube rioxarray
 
 
